@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const port = 3000;
-const publicPath = path.join(__dirname, 'public');
+const rootPath = __dirname; // Alterado para usar o diretório raiz
 
 const mimeTypes = {
     '.html': 'text/html',
@@ -17,7 +17,7 @@ const mimeTypes = {
 };
 
 const server = http.createServer((req, res) => {
-    let filePath = path.join(publicPath, req.url === '/' ? 'index.html' : req.url);
+    let filePath = path.join(rootPath, req.url === '/' ? 'index.html' : req.url);
     const ext = path.extname(filePath).toLowerCase();
     const contentType = mimeTypes[ext] || 'application/octet-stream';
 
