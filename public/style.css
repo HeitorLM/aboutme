@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.container {
+    text-align: center;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.icon {
+    font-size: 3rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    transform: scale(0.8);
+}
+
+.icon:hover {
+    color: #00a8e8;
+    transform: scale(1);
+}
